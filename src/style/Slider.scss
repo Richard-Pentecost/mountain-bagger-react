@@ -1,0 +1,31 @@
+@import '../style/variables.scss';
+
+.Slider {
+  margin-top: 1em;
+  .aws-sld__wrapper {
+    width: 80%;
+    max-width: 800px;
+    max-height: 400px;
+    margin: 0 auto;
+  }
+  
+  .aws-sld {
+    margin-top: 2em;
+  }
+  
+  .aws-sld__content {
+    background-color: transparent;
+  }
+  
+  .aws-sld__bullets button, .aws-sld__bullets--active {
+    background-color: $green-accent;
+  }
+  
+  .aws-sld__bullets {
+    bottom: -30px;
+  }
+  
+  .aws-sld__prev, .aws-sld__next {
+    opacity: 0;
+  }
+}

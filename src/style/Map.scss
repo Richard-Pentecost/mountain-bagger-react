@@ -1,0 +1,111 @@
+@import './variables';
+
+.map_container {
+  background-color: $green-accent;
+}
+
+.map_div {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.mapboxgl-map {
+  position: relative;
+  text-align: left;
+}
+
+.crosshair {
+  .mapboxgl-map, .mapboxgl-canvas {
+    cursor: crosshair;
+  }
+}
+
+.route-options {
+  position: absolute;
+  border-radius: $border-radius;
+  min-width: 320px;
+  bottom: $box-padding;
+  padding: .5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba($white, .5);
+  color: black;
+  z-index: 100;
+
+  button {
+    position: relative;
+    border: none;
+    padding: 0;
+    margin: 5px 10px 5px 10px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .save-clear button {
+    color: white;
+    border-radius: $border-radius;
+    width: 45%;
+    display: inline-block;
+    font-size: 1.2rem;
+    transition: all .3s;
+
+    &:first-of-type {
+      background: $green-accent;
+      margin-left: 3px;
+      float: left;
+
+      &:hover {
+        background: lighten($green-accent, 10%);
+      }
+    }
+
+    &:last-of-type {
+      background: $orange-accent;
+      float: right;
+      margin-right: 3px;
+
+      &:hover {
+        background: lighten($orange-accent, 10%);
+      }
+    }
+  
+    .MuiSvgIcon-root, span {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 5px;
+    }
+
+    .MuiSvgIcon-root {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+}
+
+#download-icon {
+  color: $white;
+  cursor: pointer;
+  transition: all .3s;
+  filter: drop-shadow(1px 1px 2px $grey-dark);
+}
+
+#download-icon:hover {
+  color: $green-accent;
+  filter: drop-shadow(1px 1px 2px $white);
+}
+
+.save-form {
+  input {
+    width: calc(100% - 1.4rem);
+    padding: .2rem;
+    margin-top: .3rem;
+    margin-bottom: .2rem;
+    text-align: center;
+  }
+
+  h3 {
+    color: $grey-dark;
+    margin: .2rem;
+  }
+}

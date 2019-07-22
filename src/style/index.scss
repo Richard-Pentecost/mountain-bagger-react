@@ -1,0 +1,64 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+
+@viewport {  
+  orientation: portrait;  
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $grey-dark;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: "Raleway", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 700;
+}
+
+.action {
+  display: block;
+  margin: 0 auto;
+  padding: 0.8rem;
+  width: 80%;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $green-accent;
+  color: $white;
+  text-decoration: none;
+}
+
+.outlined {
+  border: 1px solid $white;
+}
+
+.transparent {
+  background: transparent;
+}
+
+.underlined-link {
+  text-decoration-line: underline;
+  color: $white;
+}
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-metrics {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

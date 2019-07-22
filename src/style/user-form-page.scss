@@ -1,0 +1,55 @@
+@import './variables.scss';
+
+.user-form {
+  @include photo-background;
+  padding-top: 3rem;
+
+  a {
+    color: $white;
+  }
+
+  form {
+    background: $green-main;
+    width: calc(80% - 2rem);
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: $box-padding;
+    border-radius: $border-radius;
+    text-align: center;
+  
+    h2 {
+      margin: 0.5em;
+    }
+  
+    label {
+      display:block;
+      margin-top: 0.5em;
+      margin-bottom: 0.2em;
+      span {
+        display: block;
+      }
+    }
+  
+    input {
+      border-radius: $border-radius;
+      height: 1.8rem;
+      width: calc(100% - 4px);
+      text-align: center;
+    }
+  
+    p {
+      margin: 1rem 0 0 0;
+    }
+  
+    label, p {
+      color: $dark-green-accent;
+    }
+  
+    .action {
+      width: 100%;
+      margin-top: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}

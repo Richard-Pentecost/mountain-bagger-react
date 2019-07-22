@@ -1,0 +1,152 @@
+@import './variables.scss';
+
+.Home {
+  @include photo-background;
+  padding: 0;
+
+  .menu-overlay {
+    width: 100%;
+    height: calc(100% + 52px);
+    overflow-y: scroll;
+    margin-top: -52px;
+    background: $green-accent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    h1 {
+      margin-top: 2rem;
+      color: $dark-green-accent;
+    }
+  }
+
+  .offline-map {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background: $green-accent;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    font-size: 0;
+    overflow: auto;
+
+    img {
+      position: relative;
+    }
+
+    &__options {
+      font-size: 1rem;
+      position: fixed;
+      top: 100px;
+      left: 50%;
+      z-index: 91;
+      transform: translateX(-50%);
+    }
+
+    &__image-container {
+      position: relative;
+      margin: 0 auto;
+    }
+
+    &__bounds-error {
+      font-size: 1rem;
+      position: fixed;
+      top: 200px;
+      left: 50%;
+      z-index: 91;
+      transform: translateX(-50%);
+    }
+  }
+
+  .UserNav {
+    background: $green-main;
+    color: $dark-green-accent;
+    height: 52px;
+
+    a {
+      font-size: 0;
+      color: $dark-green-accent;
+    }
+  }
+
+  .LocationNav {
+    background: $white;
+    font-size: 0;
+    p {
+      font-size: 0.8rem;
+      text-align: left;
+      margin: 4px;
+      &:first-child {
+        margin-left: 9px;
+      }
+    }
+    span {
+      display: block;
+    }
+  }
+
+  .content {
+    height: calc(100vh - 174px);
+    color: $white;
+    position: relative;
+  }
+
+  .ToolsNav {
+    height: 70px;
+    background: $green-main;
+    justify-content: space-between;
+    font-size: 0;
+  }
+
+  .MuiSvgIcon-root {
+    transition: all .3s;
+  }
+
+  a:hover .MuiSvgIcon-root {
+    filter: drop-shadow(0 0 .3rem rgba($white, .8));
+    color: $green-accent;
+  }
+
+  a, a:link {
+    color: $grey-dark;
+    position: relative;
+    transition: all .3s;
+
+    &:hover {
+      color: $green-accent;
+    }
+  }
+
+  .tab-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+  }
+
+  .loading-gif {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 90px);
+    z-index: 100;
+
+    img {
+      width: 180px;
+      height: 100px;
+    }
+  }
+
+}
+
+.recharts-default-tooltip {
+  color: #0F590D;
+}
+
+.recharts-wrapper {
+  margin: 0 auto;
+  transform: translateX(-5px);
+}
